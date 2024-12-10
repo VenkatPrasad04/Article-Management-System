@@ -1,0 +1,279 @@
+﻿@model List<AMS.Models.ArticleModels.ArticleViewModel>
+@{
+    Layout = "../Shared/_Layout.cshtml";
+    
+}
+<style>
+    /* Apply styles to the body for scrollbar */
+    body {
+        overflow-y: auto; /* Allow vertical scrolling */
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <h2 class="text-dark">Article List</h2>
+        <p class="text-muted">All Articles Created By Users</p>
+        <div id="placeholder"></div>
+        <button onclick="openAddArticleModal()" class="btn btn-primary">Add Article</button>
+        <table class="table  table-hover mt-3">
+
+            <thead class="thead-light">
+                <tr>
+                    <th>Article Name</th>
+                    <th>Article Content</th>
+                    <th>Created By</th>
+                    <th>Created On</th>
+                    <th>Modified By</th>
+                    <th>Modified On</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var article in Model)
+                {
+                    <tr>
+                        <td>@article.ArticleName</td>
+                        <td>@article.ArticleContent</td>
+                        <td>@article.CreatedBy</td>
+                        <td>@article.CreatedOn.Substring(0,10)</td>
+                        <td>@article.ModifiedBy</td>
+                        @if(@article.ModifiedOn!=null){
+                        <td>@article.ModifiedOn.Substring(0, 10)</td>
+                        }else{
+                        <td>@article.ModifiedOn</td>
+                        }  
+                        <td>
+                            <button class="btn btn-info" data-toggle="modal" data-target="#editArticleModal" onclick="openEditArticleModal('@article.ArticleName','@article.ArticleContent')">Edit</button>
+                            <button class="btn btn-danger" data-toggle="modal" data-target="#deleteArticleModal" onclick="openDeleteArticleModal('@article.ArticleName')">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+
+<!-- Add Article Modal -->
+<div class="modal fade" id="addArticleModal" tabindex="-1" role="dialog" aria-labelledby="addArticleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addArticleModalLabel">Add Article</h5>
+                <button type="button" class="close" onclick="Closepopup()" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add Article form -->
+                <form id="addArticleForm">
+                    <label for="articleName">Article Name:</label>
+                    <input type="text" id="articleName" class="form-control" required pattern=".*\s+.*">
+
+                    <label for="articleContent">Article Content:</label>
+                    <textarea id="articleContent" class="form-control" required pattern=".*\s+.*"></textarea>
+
+                    <button type="button" class="btn btn-primary" onclick="addArticle()">Create</button>
+                    <button type="button" class="btn btn-secondary" onclick="Closepopup()" data-dismiss="modal">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Article Modal -->
+<div class="modal fade" id="editArticleModal" tabindex="-1" role="dialog" aria-labelledby="editArticleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editArticleModalLabel">Edit Article</h5>
+                <button type="button" class="close" onclick="Closepopup()" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Edit Article form -->
+                <form id="editArticleForm">
+                    <label for="editArticleName">Article Name:</label>
+                    <input type="text" id="editArticleName" class="form-control" required>
+                    <label for="editArticleContent">Article Content:</label>
+                    <textarea id="editArticleContent" class="form-control" required></textarea>
+                    <button type="button" class="btn btn-primary" onclick="updateArticle()">Update</button>
+                    <button type="button" class="btn btn-secondary" onclick="Closepopup()" data-dismiss="modal">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Article Modal -->
+<div class="modal fade" id="deleteArticleModal" tabindex="-1" role="dialog" aria-labelledby="deleteArticleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteArticleModalLabel">Delete Article</h5>
+                <button type="button" class="close" onclick="Closepopup()" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete the article: <strong id="deleteArticleName"></strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="deleteArticle()">Ok</button>
+                <button type="button" class="btn btn-secondary" onclick="Closepopup()" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+        function addArticle() {
+            // Get values from input fields
+            var articleName = $('#articleName').val();
+            var articleContent = $('#articleContent').val();
+
+            // Client-side validation
+            if (!articleName || !articleContent) {
+                alert('Article name and content cannot be empty');
+                return;
+            }
+
+            // Make AJAX request for server-side validation
+            $.ajax({
+                url: '/Article/ArticleCreate',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    ArticleName: articleName,
+                    ArticleContent: articleContent
+                }),
+                success: function (data) {
+                    if (data.success) {
+                        alert("Article created successfully");
+                        $('#addArticleModal').modal('hide');
+                        window.location.reload();
+                    } else {
+                        // Check if the error message indicates that the article already exists
+                        if (data.error && data.error.toLowerCase().includes('already exists')) {
+                            alert('Article with the same name already exists');
+                        } else {
+                            alert('An error occurred while adding the article: ' + data.error);
+                        }
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('An error occurred while adding the article. Status: ' + status + ', Error: ' + error);
+                }
+            });
+        }
+
+    function Closepopup(){
+        $('#addArticleModal').modal('hide');
+        $('#editArticleModal').modal('hide');
+
+    }
+
+        function openAddArticleModal() {
+            $('#addArticleModal').modal('show');
+        }
+
+        // Script for Update Article
+        function openEditArticleModal(articleName, articleContent) {
+            $('#editArticleName').val(articleName);
+            $('#editArticleContent').val(articleContent);
+            $('#editArticleModal').modal('show');
+        }
+
+        function updateArticle() {
+            var updatedArticleName = $('#editArticleName').val();
+            var updatedArticleContent = $('#editArticleContent').val();
+
+            // Validation: Check if either name or content is empty
+            if (!updatedArticleName.trim() || !updatedArticleContent.trim()) {
+                alert('Article name and content cannot be empty');
+                return;
+            }
+
+            $.ajax({
+                url: '/Article/ArticleUpdate',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    ArticleName: updatedArticleName,
+                    ArticleContent: updatedArticleContent
+                }),
+                success: function (data) {
+                    if (data.success) {
+                        alert("Article updated successfully");
+                        $('#editArticleModal').modal('hide');
+                        window.location.reload();
+                    } else {
+                        alert('An error occurred while updating the article: ' + data.error);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('An error occurred while updating the article. Status: ' + status + ', Error: ' + error);
+                }
+            });
+        }
+        
+  
+
+        // For Delete
+        var ArticleName; // Variable for storing article name
+
+        function openDeleteArticleModal(articleName) {
+            $('#deleteArticleName').text(articleName);
+            ArticleName = articleName;
+            $('#deleteArticleModal').modal('show');
+        }
+
+        function deleteArticle() {
+            $.ajax({
+                url: '/Article/DeleteArticle',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    ArticleName: ArticleName
+                }),
+                success: function (data) {
+                    if (data.success) {
+                        alert("Article deleted successfully");
+                        $('#deleteArticleModal').modal('hide');
+                        window.location.reload();
+                    } else {
+                        alert('An error occurred while deleting the article: ' + data.error);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('An error occurred while deleting the article. Status: ' + status + ', Error: ' + error);
+                }
+            });
+        }
+
+    
+
+
+        @section scripts {
+        <script>
+                    function changePage(page) {
+                        // Make AJAX request to fetch data for the new page
+                        $.ajax({
+                            url: '/YourController/ArticleList?page=' + page,
+                            type: 'GET',
+                            success: function (data) {
+                                // Update the table with the new data
+                                $('#yourTableBody').html(data);
+                            },
+                            error: function (xhr, status, error) {
+                                console.error('An error occurred while fetching data. Status: ' + status + ', Error: ' + error);
+                            }
+                        });
+                    }
+        </script>
+    }
+    </script>

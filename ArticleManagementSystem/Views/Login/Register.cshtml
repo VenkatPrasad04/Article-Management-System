@@ -1,0 +1,91 @@
+﻿@model AMS.Models.LoginModels.RegisterViewModel
+@{
+    Layout = "~/Views/Shared/_ShareLogin.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: rgba(200, 200, 200, 0.8); /* Adjust the alpha value for transparency */
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .background_image {
+            background-color: transparent; /* Set background color to transparent */
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <form id="Login-form" method="post" action="@Url.Action("ValidateRegister", "Login")">
+        <div class="container-fluid">
+            <div class="row" style="padding-top: 30px">
+                <div class="col-md-6 background_image">
+                    <img class="img-fluid" src="~/images/register.png" alt="login-image" />
+                </div>
+                <div class="col-md-6" style="padding-top: 30px">
+                    <!-- LOGIN FORM HERE -->
+                    <div class="form-group">
+                        <div class="form-label-group">
+                            <label class="form-label required">First Name</label>
+                            <input type="text" class="form-control" placeholder="Enter FirstName" asp-for="FirstName" />
+                            @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+                            
+                        </div>
+                        <div class="form-label-group">
+                            <label class="form-label required">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Enter LastName" asp-for="LastName" />
+                            @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+                            
+                        </div>
+                        <div class="form-label-group">
+                            <label class="form-label required">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter FirstName" asp-for="UserName" />
+                            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                            
+                        </div>
+                        <div class="form-label-group">
+                            <label asp-for="Gender"></label>
+                            <select asp-for="Gender" class="form-control">
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-label-group">
+                        <label class="form-label required">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter Password" asp-for="Password" />
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label required">Confirm Password</label>
+                        <input type="password" class="form-control" placeholder="Confirm Password" asp-for="ConfirmPassword" />
+                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })                        
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-md">Register</button>
+                    <div class="mt-3">
+                         <a href="@Url.Action("Index", "Login")">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

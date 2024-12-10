@@ -1,0 +1,78 @@
+﻿@model AMS.Models.DashboardModels.DashboardViewModel
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<div class="container">
+    <div class="row">
+        <!-- First Card: Count of Created Items -->
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 20rem">
+                <div class="card-body">
+                    <h5 class="card-title">Created</h5>
+                    <h2 class="card-text">@Model.Created</h2> 
+                    <p class="small text-muted">Articles by user</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Card: Count of Modified Items -->
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 20rem">
+                <div class="card-body">
+                    <h5 class="card-title">Modified</h5>
+                    <h2 class="card-text">@Model.Updated</h2> 
+                    <p class="small text-muted">Articles by user</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Card: Count of Deleted Items -->
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 20rem">
+                <div class="card-body">
+                    <h5 class="card-title">Deleted</h5>
+                    <h2 class="card-text">@Model.Deleted</h2> 
+                    <p class="small text-muted">Articles by user</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+    <table class="table table-bordered table-striped mb-0">
+        <thead>
+            <tr>   
+                <th scope="col" class="text-center">Activity Log</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var activityLog in Model.Activity)
+            {
+                <tr>
+                    <td>@activityLog.LogMessage</td>
+                </tr>
+            }
+              
+        </tbody>
+    </table>
+
+</div>
+<style>
+    .my-custom-scrollbar {
+        position: relative;
+        height: 300px;
+        overflow: auto;
+    }
+
+    .table-wrapper-scroll-y {
+        display: block;
+    }
+
+    .table-bordered {
+        width: 100%; /* Set to 100% to make it fill the container */
+
+    }
+</style>

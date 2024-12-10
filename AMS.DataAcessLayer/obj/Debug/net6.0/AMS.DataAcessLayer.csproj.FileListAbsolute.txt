@@ -1,0 +1,60 @@
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.deps.json
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.Models.dll
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.Models.pdb
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.CopyComplete
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\refint\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Debug\net6.0\ref\AMS.DataAcessLayer.dll
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.deps.json
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.dll
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.Models.dll
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.Models.pdb
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.AssemblyReference.cache
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.AssemblyInfoInputs.cache
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.AssemblyInfo.cs
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.CopyComplete
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.dll
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\refint\AMS.DataAcessLayer.dll
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\nikhi\OneDrive\Desktop\Venky\AMS\Test\AMS.DataAcessLayer\obj\Debug\net6.0\ref\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.deps.json
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.Models.dll
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.Models.pdb
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.CopyComplete
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\refint\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\Admin\Desktop\Assignment 1\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\ref\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.deps.json
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.Models.dll
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\bin\Debug\net6.0\AMS.Models.pdb
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.AssemblyInfo.cs
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.Data.74096F6C.Up2Date
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\refint\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\Admin\Desktop\12thW Assignments\Article Management System\Article Management System\AMS.DataAcessLayer\obj\Debug\net6.0\ref\AMS.DataAcessLayer.dll

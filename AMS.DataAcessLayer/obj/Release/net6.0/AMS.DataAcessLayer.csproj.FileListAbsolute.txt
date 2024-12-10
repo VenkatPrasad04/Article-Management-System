@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Release\net6.0\AMS.DataAcessLayer.deps.json
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Release\net6.0\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Release\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Release\net6.0\AMS.Models.dll
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\bin\Release\net6.0\AMS.Models.pdb
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\AMS.DataAcessLayer.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\AMS.DataAcessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\AMS.DataAcessLayer.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\AMS.DataAcessLayer.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\AMS.DataAcessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\AMS.DataAcessLayer.csproj.CopyComplete
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\refint\AMS.DataAcessLayer.dll
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\AMS.DataAcessLayer.pdb
+C:\Users\Admin\Desktop\Test\AMS.DataAcessLayer\obj\Release\net6.0\ref\AMS.DataAcessLayer.dll

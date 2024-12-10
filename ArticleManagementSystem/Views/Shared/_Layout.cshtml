@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ArticleManagementSystem</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ArticleManagementSystem.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light" style="background-color: #F0F3F4;">
+            <div class="container-fluid">
+
+                <div id="sidebar">
+                    <h5>Menu</h5>
+                    <a href="#" class="close-btn" onclick="closeNav()">&times;</a>
+                    <a href=" @Url.Action("Index", "Dashboard")">Dashboard</a>
+                    <a href=" @Url.Action("Index", "Article")">Article</a>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <button class="btn btn-primary " id="menu-toggle" onclick="openNav()" style="background-color: #111;  color: white;">
+                        ☰ Menu
+                    </button>
+                </nav>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: #5499C7;font-weight: bold;">Article Management System</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-primary" asp-area="" asp-controller="Login" asp-action="Index">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    
+
+    <script>
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+            document.getElementById("content").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("content").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
+<style>
+    
+    #sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #F2F3F4;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 12px;
+    }
+
+        #sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #111;
+            display: block;
+            transition: 0.3s;
+        }
+
+            #sidebar a:hover {
+                color: #3498DB;
+            }
+
+        #sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 30px;
+            margin-left: 50px;
+            color:#111;
+        }
+
+        #sidebar h5 {
+            color: #111;
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #111; /* Add a border line */
+        }
+
+        #sidebar a#Activity Log-link {
+            font-weight: 500; /* Set font weight to medium */
+        }
+
+    #content {
+        transition: margin-left 0.5s;
+        padding: 16px;
+    }
+
+    @@media screen and (max-height: 450px) {
+        #sidebar {
+            padding-top: 15px;
+        }
+
+            #sidebar a {
+                font-size: 18px;
+            }
+    }
+</style>
+
+
+
